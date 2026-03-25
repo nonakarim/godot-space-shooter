@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://coe75mcwik7"]
+
+[ext_resource type="Texture2D" uid="uid://c274bdbasjd3v" path="res://Graphics/PNG/playerShip2_orange.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://ds01ofabjdfx" path="res://Scripts/player.gd" id="1_cvnsp"]
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 6
+script = ExtResource("1_cvnsp")
+
+[node name="PlayerImage" type="Sprite2D" parent="."]
+position = Vector2(7, -1)
+scale = Vector2(1.1116072, 1.0500004)
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-42, -37)
+scale = Vector2(0.21673292, 0.22629112)
+polygon = PackedVector2Array(-59, 185, 5, 179, 172, 91, 203.01485, -17.676346, 244.5406, -17.676346, 280, 64, 290, 89, 462, 192, 462, 165, 510, 197, 419.87158, 322.59326, 304.52228, 300.49786, 308, 341, 276.83844, 327.01236, 161.48907, 335.85052, 129.19127, 304.91693, 23.06987, 322.59326)

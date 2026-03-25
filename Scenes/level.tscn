@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2sukm7syxd5i"]
+
+[ext_resource type="Script" uid="uid://uoibdmwxpj0d" path="res://Scripts/level.gd" id="1_81xng"]
+[ext_resource type="Texture2D" uid="uid://cgc2y2ruyrrk7" path="res://Graphics/PNG/Damage/darkPurple.png" id="1_k5f4k"]
+[ext_resource type="PackedScene" uid="uid://coe75mcwik7" path="res://Scenes/player.tscn" id="1_tumq0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6phgx"]
+size = Vector2(53, 799)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81xng"]
+size = Vector2(1273, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqkje"]
+size = Vector2(55, 797.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0f350"]
+size = Vector2(1327.5, 50.75)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_81xng")
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(663, 374)
+scale = Vector2(5.21875, 2.9296875)
+texture = ExtResource("1_k5f4k")
+
+[node name="Player" parent="." instance=ExtResource("1_tumq0")]
+
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
+
+[node name="Left" type="CollisionShape2D" parent="Borders/StaticBody2D"]
+position = Vector2(-27.5, 372.5)
+shape = SubResource("RectangleShape2D_6phgx")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
+
+[node name="Up" type="CollisionShape2D" parent="Borders/StaticBody2D2"]
+position = Vector2(634, -18.5)
+shape = SubResource("RectangleShape2D_81xng")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
+
+[node name="Right" type="CollisionShape2D" parent="Borders/StaticBody2D3"]
+position = Vector2(1304, 368.375)
+shape = SubResource("RectangleShape2D_wqkje")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
+
+[node name="Down" type="CollisionShape2D" parent="Borders/StaticBody2D4"]
+position = Vector2(652, 745.375)
+shape = SubResource("RectangleShape2D_0f350")
+
+[node name="MeteorTimer" type="Timer" parent="."]
+wait_time = 0.584
+autostart = true
+
+[node name="Meteors" type="Node2D" parent="."]
+
+[node name="Lasers" type="Node2D" parent="."]
+
+[connection signal="laser" from="Player" to="." method="_on_player_laser"]
+[connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]

@@ -9,7 +9,7 @@ func _ready() -> void:
 	position = Vector2(576, 650)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var direction = Input.get_vector("KeyLeft","KeyRight","KeyUp","KeyDown")
 	
 	velocity = direction * speed 

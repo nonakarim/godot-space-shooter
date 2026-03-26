@@ -158,47 +158,56 @@ texture = ExtResource("1_k5f4k")
 position = Vector2(204.1875, 267.0625)
 scale = Vector2(0.25944456, 0.24944441)
 sprite_frames = SubResource("SpriteFrames_8c0lf")
+autoplay = "default"
 
 [node name="Star2" type="AnimatedSprite2D" parent="Stars"]
 position = Vector2(932.25, 494.25)
 scale = Vector2(0.2777776, 0.24222234)
 sprite_frames = SubResource("SpriteFrames_wqkje")
+autoplay = "default"
 
 [node name="star3" type="AnimatedSprite2D" parent="Stars"]
 position = Vector2(409.375, 672.375)
 scale = Vector2(0.23444448, 0.19888887)
 sprite_frames = SubResource("SpriteFrames_0f350")
+autoplay = "default"
 
 [node name="star4" type="AnimatedSprite2D" parent="Stars"]
 position = Vector2(677.875, 357.625)
 scale = Vector2(0.23000051, 0.20111111)
 sprite_frames = SubResource("SpriteFrames_754fn")
+autoplay = "default"
 
 [node name="star5" type="AnimatedSprite2D" parent="Stars"]
 position = Vector2(1066.75, 214.25)
 scale = Vector2(0.23777768, 0.21555558)
 sprite_frames = SubResource("SpriteFrames_bvt00")
+autoplay = "default"
 
 [node name="star6" type="AnimatedSprite2D" parent="Stars"]
 position = Vector2(521.25, 220.75)
 scale = Vector2(0.30444443, 0.30888888)
 sprite_frames = SubResource("SpriteFrames_oqgf2")
+autoplay = "default"
 frame_progress = 0.27248183
 
 [node name="star7" type="AnimatedSprite2D" parent="Stars"]
 position = Vector2(388.875, 437.375)
 scale = Vector2(0.2833334, 0.25222218)
 sprite_frames = SubResource("SpriteFrames_qxfql")
+autoplay = "default"
 
 [node name="star8" type="AnimatedSprite2D" parent="Stars"]
 position = Vector2(883.25, 225.75)
 scale = Vector2(0.29555568, 0.31777784)
 sprite_frames = SubResource("SpriteFrames_ha31o")
+autoplay = "default"
 
 [node name="star9" type="AnimatedSprite2D" parent="Stars"]
 position = Vector2(734.25, 588.75)
 scale = Vector2(0.39333335, 0.3888889)
 sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
 
 [node name="Player" parent="." instance=ExtResource("1_tumq0")]
 position = Vector2(9, -13)

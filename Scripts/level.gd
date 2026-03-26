@@ -19,6 +19,9 @@ func _ready() -> void:
 		var rand_y = rng.randi_range(0, size.y)
 		
 		star.position = Vector2(rand_x, rand_y)
+		
+		var random_scale = rng.randf_range(0.11, 0.200)
+		star.scale = Vector2(random_scale, random_scale)
 
 func _on_meteor_timer_timeout() -> void:
 	var meteor = MeteorScene.instantiate()

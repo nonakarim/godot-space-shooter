@@ -17,5 +17,5 @@ func _process(delta: float) -> void:
 		position = Vector2(576, 650)
 		
 	if Input.is_action_just_pressed("Shoot"):
-		laser.emit(position)
+		laser.emit($LaserStartPosition.global_position)
 	move_and_slide()

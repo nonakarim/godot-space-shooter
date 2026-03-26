@@ -20,6 +20,5 @@ func _on_meteor_timer_timeout() -> void:
 
 func _on_player_laser(pos) -> void:
 	var laser = LaserScene.instantiate()
-	laser.position.x = pos.x
-	laser.position.y = pos.y - 100
+	laser.position = pos
 	$Lasers.add_child(laser)

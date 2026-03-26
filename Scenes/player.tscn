@@ -19,3 +19,8 @@ polygon = PackedVector2Array(-59, 185, 5, 179, 172, 91, 203.01485, -17.676346, 2
 
 [node name="LaserStartPosition" type="Marker2D" parent="."]
 position = Vector2(180, -8)
+
+[node name="LaserTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]

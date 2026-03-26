@@ -10,6 +10,16 @@ var textures = [
 	load("res://Graphics/PNG/Meteors/meteorGrey_med2.png")
 ]
 
+func _ready() -> void:
+	var size = get_viewport().get_visible_rect().size
+	var rng = RandomNumberGenerator.new()
+	
+	for star in $Stars.get_children():
+		var rand_x = rng.randi_range(0, size.x)
+		var rand_y = rng.randi_range(0, size.y)
+		
+		star.position = Vector2(rand_x, rand_y)
+
 func _on_meteor_timer_timeout() -> void:
 	var meteor = MeteorScene.instantiate()
 	

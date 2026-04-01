@@ -14,4 +14,6 @@ func set_health(amount):
 		
 		$MarginContainer2/HBoxContainer.add_child(texRect)
 		texRect.stretch_mode = TextureRect.STRETCH_KEEP
-	
+		
+func set_score(score): 
+	$MarginContainer/Label.text = "Score: " + str(score)

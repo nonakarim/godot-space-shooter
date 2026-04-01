@@ -17,7 +17,7 @@ size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.5424045, 0.9999997, 0.81244665, 1)
 theme_override_fonts/font = ExtResource("1_qdvrb")
 theme_override_font_sizes/font_size = 38
-text = "Hey"
+text = "Score: 0"
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 anchors_preset = 2

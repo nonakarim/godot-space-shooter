@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://d2sukm7syxd5i"]
+[gd_scene load_steps=20 format=3 uid="uid://d2sukm7syxd5i"]
 
 [ext_resource type="Script" uid="uid://uoibdmwxpj0d" path="res://Scripts/level.gd" id="1_81xng"]
 [ext_resource type="Texture2D" uid="uid://cgc2y2ruyrrk7" path="res://Graphics/PNG/Damage/darkPurple.png" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://coe75mcwik7" path="res://Scenes/player.tscn" id="1_tumq0"]
 [ext_resource type="Texture2D" uid="uid://bcn7uypxts06h" path="res://Graphics/star1.png" id="4_wqkje"]
 [ext_resource type="Texture2D" uid="uid://dtqtqdrl4is8j" path="res://Graphics/star2.png" id="5_0f350"]
+[ext_resource type="PackedScene" uid="uid://dibtxpkw6dr4d" path="res://Scenes/ui.tscn" id="6_0f350"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8c0lf"]
 animations = [{
@@ -151,6 +152,7 @@ script = ExtResource("1_81xng")
 position = Vector2(665, 380)
 scale = Vector2(5.21875, 2.9296875)
 texture = ExtResource("1_k5f4k")
+metadata/_edit_lock_ = true
 
 [node name="Stars" type="Node2D" parent="."]
 
@@ -218,7 +220,7 @@ position = Vector2(9, -13)
 collision_layer = 4
 
 [node name="Left" type="CollisionShape2D" parent="Borders/StaticBody2D"]
-position = Vector2(15, 363.75)
+position = Vector2(21, 372)
 shape = SubResource("RectangleShape2D_6phgx")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Borders"]
@@ -249,6 +251,8 @@ autostart = true
 [node name="Meteors" type="Node2D" parent="."]
 
 [node name="Lasers" type="Node2D" parent="."]
+
+[node name="UI" parent="." instance=ExtResource("6_0f350")]
 
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]

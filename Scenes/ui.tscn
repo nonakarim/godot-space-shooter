@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://dibtxpkw6dr4d"]
+
+[ext_resource type="Script" uid="uid://c2lfhvdqo4g2c" path="res://Scripts/ui.gd" id="1_nf4gj"]
+[ext_resource type="FontFile" uid="uid://01bvr63d65vc" path="res://Graphics/Fonts&sounds/kenvector_future_thin.ttf" id="1_qdvrb"]
+
+[node name="UI" type="CanvasLayer" groups=["ui"]]
+script = ExtResource("1_nf4gj")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 81.0
+offset_bottom = 64.0
+theme_override_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.5424045, 0.9999997, 0.81244665, 1)
+theme_override_fonts/font = ExtResource("1_qdvrb")
+theme_override_font_sizes/font_size = 38
+text = "Hey"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -75.0
+offset_right = 228.0
+grow_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2"]
+layout_mode = 2

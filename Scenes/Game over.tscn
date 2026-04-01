@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfle6wh2fy1nj"]
+
+[ext_resource type="Script" uid="uid://bki3cmx383fg5" path="res://Scripts/game_over.gd" id="1_og3lb"]
+[ext_resource type="FontFile" uid="uid://8gf5g0dw6s4p" path="res://Graphics/Fonts&sounds/kenvector_future.ttf" id="1_wn432"]
+
+[node name="Game Ovar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_og3lb")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1348.0
+offset_bottom = 742.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6702337, 0.35877225, 0.7536154, 1)
+
+[node name="Game over text" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.31800002
+anchor_top = 0.37600002
+anchor_right = 0.60300004
+anchor_bottom = 0.5
+offset_left = 250.0
+offset_top = 191.0
+offset_right = 1016.0
+offset_bottom = 312.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_wn432")
+theme_override_font_sizes/font_size = 107
+text = "Game Over"
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47000003
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 540.0
+offset_top = 312.0
+offset_right = 727.0
+offset_bottom = 365.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Your score: 0"
+
+[node name="Play again" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.30200002
+anchor_top = 0.906
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 488.0
+offset_top = 678.0
+offset_right = 812.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Press \"R\" to play again"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 766.0
+offset_bottom = 121.0

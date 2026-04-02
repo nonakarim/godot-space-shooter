@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bki3cmx383fg5" path="res://Scripts/game_over.gd" id="1_og3lb"]
 [ext_resource type="FontFile" uid="uid://8gf5g0dw6s4p" path="res://Graphics/Fonts&sounds/kenvector_future.ttf" id="1_wn432"]
 
-[node name="Game Ovar" type="Control"]
+[node name="Game_Over" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_og3lb")
@@ -21,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.6702337, 0.35877225, 0.7536154, 1)
 
-[node name="Game over text" type="Label" parent="."]
+[node name="Game_over_text" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.31800002
@@ -52,7 +52,7 @@ offset_bottom = 365.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
-text = "Your score: 0"
+text = "Final score: "
 
 [node name="Play again" type="Label" parent="."]
 layout_mode = 1

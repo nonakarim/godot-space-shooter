@@ -12,4 +12,5 @@ func _process(delta: float) -> void:
 	
 func _on_area_entered(area: Area2D) -> void: 
 	score += 1 
+	Global.score = score
 	get_tree().call_group("ui", "set_score", score)

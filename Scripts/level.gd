@@ -13,6 +13,8 @@ var textures = [
 ]
 
 func _ready() -> void:
+	
+	
 	#set up health ui
 	get_tree().call_group("ui", "set_health", health)
 	
@@ -52,5 +54,11 @@ func _on_meteor_collision():
 
 func _on_player_laser(pos) -> void:
 	var laser = LaserScene.instantiate()
-	laser.position = pos
+	laser.position = pos   
 	$Lasers.add_child(laser)
+	
+
+
+func _process(delta: float) -> void:
+	if not $"Game-Play-sound".playing:
+		$"Game-Play-sound".play()

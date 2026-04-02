@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://coe75mcwik7"]
+[gd_scene load_steps=4 format=3 uid="uid://coe75mcwik7"]
 
 [ext_resource type="Texture2D" uid="uid://c274bdbasjd3v" path="res://Graphics/PNG/playerShip2_orange.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://ds01ofabjdfx" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="AudioStream" uid="uid://71gs86tdhcc8" path="res://Graphics/Fonts&sounds/sfx-laser2_buXrdMnm .ogg" id="3_6t5aa"]
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 6
@@ -22,5 +23,8 @@ position = Vector2(180, -8)
 
 [node name="LaserTimer" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="Laser_Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_6t5aa")
 
 [connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]

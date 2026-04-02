@@ -21,6 +21,7 @@ func _process(_delta: float) -> void:
 		laser.emit($LaserStartPosition.global_position)
 		can_shoot = false;
 		$LaserTimer.start()
+		$Laser_Sound.play()
 	move_and_slide()
 
 

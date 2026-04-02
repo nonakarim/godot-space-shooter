@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d2sukm7syxd5i"]
+[gd_scene load_steps=21 format=3 uid="uid://d2sukm7syxd5i"]
 
 [ext_resource type="Script" uid="uid://uoibdmwxpj0d" path="res://Scripts/level.gd" id="1_81xng"]
 [ext_resource type="Texture2D" uid="uid://cgc2y2ruyrrk7" path="res://Graphics/PNG/Damage/darkPurple.png" id="1_k5f4k"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bcn7uypxts06h" path="res://Graphics/star1.png" id="4_wqkje"]
 [ext_resource type="Texture2D" uid="uid://dtqtqdrl4is8j" path="res://Graphics/star2.png" id="5_0f350"]
 [ext_resource type="PackedScene" uid="uid://dibtxpkw6dr4d" path="res://Scenes/ui.tscn" id="6_0f350"]
+[ext_resource type="AudioStream" uid="uid://bnj22pkhdps2f" path="res://Graphics/Fonts&sounds/GamePlay.mp3" id="7_8c0lf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8c0lf"]
 animations = [{
@@ -253,6 +254,9 @@ autostart = true
 [node name="Lasers" type="Node2D" parent="."]
 
 [node name="UI" parent="." instance=ExtResource("6_0f350")]
+
+[node name="Game-Play-sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_8c0lf")
 
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]

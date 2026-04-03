@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var speed: int = 500
 var can_shoot : bool = true
+var laserCount : int = 10
 
 signal laser(pos)
 
@@ -17,7 +18,8 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Original"):
 		position = Vector2(576, 650)
 		
-	if Input.is_action_just_pressed("Shoot") and can_shoot:
+	if Input.is_action_just_pressed("Shoot") and can_shoot and laserCount > 0:
+		laserCount -= 1
 		laser.emit($LaserStartPosition.global_position)
 		can_shoot = false;
 		$LaserTimer.start()

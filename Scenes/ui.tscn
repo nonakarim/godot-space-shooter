@@ -20,17 +20,23 @@ theme_override_font_sizes/font_size = 38
 text = "Score: 0"
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -75.0
-offset_right = 228.0
+anchors_preset = -1
+anchor_left = 0.85700005
+anchor_top = 0.028
+anchor_right = 0.989
+anchor_bottom = 0.132
+offset_left = 0.039916992
+offset_top = -0.15999985
+offset_right = 11.079956
+offset_bottom = -0.040000916
 grow_vertical = 0
+size_flags_horizontal = 8
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_bottom = 20
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2"]
 layout_mode = 2
+size_flags_horizontal = 0
 
 [node name="MarginContainer3" type="MarginContainer" parent="."]
 anchors_preset = 5
@@ -47,4 +53,4 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.45936406, 0.99075645, 0.85882634, 1)
 theme_override_fonts/font = ExtResource("1_qdvrb")
 theme_override_font_sizes/font_size = 32
-text = "Lasers left: "
+text = "Lasers: "

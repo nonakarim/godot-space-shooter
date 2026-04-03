@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjdbeb8bmkx72"]
+
+[ext_resource type="Script" uid="uid://dsbcnobjw17uh" path="res://gpu_particles_2d.gd" id="1_5ehqd"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_m07cm"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gi0sb"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 128.0
+gravity = Vector3(0, 98, 0)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 50
+texture = SubResource("CanvasTexture_m07cm")
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_gi0sb")
+script = ExtResource("1_5ehqd")

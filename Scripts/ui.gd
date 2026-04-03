@@ -11,11 +11,9 @@ func set_health(amount):
 	for i in amount:
 		var texRect = TextureRect.new()
 		texRect.texture = image
-		texRect.size = Vector2(0.5, 0.5)
 		
 		$MarginContainer2/HBoxContainer.add_child(texRect)
-		texRect.expand = true
-		texRect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT
+		texRect.stretch_mode = TextureRect.STRETCH_KEEP
 		
 func set_score(score): 
 	$MarginContainer/Label.text = "Score: " + str(score)

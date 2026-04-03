@@ -17,3 +17,6 @@ func set_health(amount):
 		
 func set_score(score): 
 	$MarginContainer/Label.text = "Score: " + str(score)
+	
+func set_laser_count(laser):
+	$MarginContainer3/Label.text = "Lasers left: " + str(laser)

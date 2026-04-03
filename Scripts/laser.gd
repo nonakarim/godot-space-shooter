@@ -11,6 +11,7 @@ func _process(delta: float) -> void:
 	position.y -= speed * delta
 	
 func _on_area_entered(area: Area2D) -> void: 
+	Global.laserCount += 1
 	area.queue_free()
 	queue_free()  
 	score += 1 

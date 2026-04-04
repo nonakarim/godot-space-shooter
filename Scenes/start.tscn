@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://derhvw4p1tr3p"]
+
+[ext_resource type="Script" uid="uid://cwdm77bau7j0r" path="res://scripts/start.gd" id="1_lb6bl"]
+[ext_resource type="Texture2D" uid="uid://duyegoyyabqcs" path="res://Graphics/Backgrounds/Start_menu_sample_image.jpg" id="2_rk01k"]
+[ext_resource type="Texture2D" uid="uid://b8h427u27n7j3" path="res://Graphics/PNG/Exit-gray.png" id="3_o3wvq"]
+[ext_resource type="Texture2D" uid="uid://b7ksu1rwudbnt" path="res://Graphics/PNG/start-red.png" id="4_pg4io"]
+[ext_resource type="Texture2D" uid="uid://ceaok70p4ycjh" path="res://Graphics/PNG/ship.png" id="5_rk01k"]
+
+[node name="Start" type="Area2D"]
+script = ExtResource("1_lb6bl")
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(656.74994, 369)
+scale = Vector2(1.8158618, 1.5475688)
+texture = ExtResource("2_rk01k")
+
+[node name="Exit" type="Sprite2D" parent="."]
+position = Vector2(645.00006, 593)
+scale = Vector2(0.5515624, 0.54305553)
+texture = ExtResource("3_o3wvq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(64.00001, 51)
+scale = Vector2(0.88552415, 0.9151569)
+polygon = PackedVector2Array(570, 661, 522, 634, 501, 622, 491, 580, 518, 506, 550, 507, 573, 482, 602, 488, 634, 474, 659, 475, 691, 495, 728, 528, 759, 538, 774, 568, 789.36304, 619.5659, 774.6825, 656.718, 712, 681, 659, 675, 642, 671, 613, 679, 602, 664)
+
+[node name="Start" type="Sprite2D" parent="."]
+position = Vector2(642, 354)
+scale = Vector2(0.57708335, 0.5615741)
+texture = ExtResource("4_pg4io")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(154, 84.000015)
+scale = Vector2(0.7734375, 0.77)
+polygon = PackedVector2Array(511.99997, 431.16882, 500.36362, 407.79218, 468.04037, 402.59735, 437.0101, 368.83112, 452.52524, 311.6883, 470.62625, 277.92206, 491.31314, 237.66231, 533, 246, 566, 223, 608, 222, 634.82825, 206.49348, 695, 251, 739, 283, 773, 309, 782, 361, 777.05054, 418.18176, 743, 439, 704.6465, 463.63635, 661.97974, 462.33765, 650.3434, 445.45453, 598, 453, 571.47473, 451.948, 545.6162, 440.2597)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(420, 328)
+texture = ExtResource("5_rk01k")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

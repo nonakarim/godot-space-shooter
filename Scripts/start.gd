@@ -13,6 +13,13 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 				
 				
 func _process(delta: float) -> void:
+	if $Sprite2D.position.y == $Start.position.y:
+		$Start.texture = load("res://Graphics/PNG/start-red.png")
+		$Exit.texture= load("res://Graphics/PNG/Exit-gray.png")
+	if $Sprite2D.position.y == $Exit.position.y:
+		$Exit.texture = load("res://Graphics/PNG/Exit-red.png")
+		$Start.texture= load("res://Graphics/PNG/start-gray.png")
+		
 	if Input.is_action_pressed("KeyDown"):
 		$Sprite2D.position.y = $Exit.position.y
 	elif Input.is_action_pressed("KeyUp"):

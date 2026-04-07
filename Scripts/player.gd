@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 	var direction = Input.get_vector("KeyLeft","KeyRight","KeyUp","KeyDown")
 
 	velocity = direction * speed 
-	if not Global.health <= 0:
+	if not Global.health <= 0 and Global.laserCount > 0:
 		pos = position
  
 	if Input.is_action_just_pressed("Original"):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://coe75mcwik7"]
+[gd_scene load_steps=8 format=3 uid="uid://coe75mcwik7"]
 
 [ext_resource type="Texture2D" uid="uid://c274bdbasjd3v" path="res://Graphics/PNG/playerShip2_orange.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://ds01ofabjdfx" path="res://Scripts/player.gd" id="1_cvnsp"]
@@ -10,6 +10,14 @@
 particle_flag_disable_z = true
 emission_shape = 1
 emission_sphere_radius = 21.83
+gravity = Vector3(0, 98, 0)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_6t5aa"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vgqql"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 74.15
 gravity = Vector3(0, 98, 0)
 
 [node name="Player" type="CharacterBody2D"]
@@ -43,5 +51,11 @@ texture = SubResource("CanvasTexture_vgqql")
 collision_base_size = 128.0
 local_coords = true
 process_material = SubResource("ParticleProcessMaterial_fkybt")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 500
+texture = SubResource("CanvasTexture_6t5aa")
+process_material = SubResource("ParticleProcessMaterial_vgqql")
 
 [connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]

@@ -1,7 +1,5 @@
 extends Node2D
 
-var health: int = 3
-
 var MeteorScene : PackedScene = load("res://Scenes/meteors.tscn")
 var LaserScene : PackedScene = load("res://Scenes/laser.tscn")
 
@@ -16,7 +14,7 @@ func _ready() -> void:
 	
 	
 	#set up health ui
-	get_tree().call_group("ui", "set_health", health)
+	get_tree().call_group("ui", "set_health", Global.health)
 	
 	#stars
 	var size = get_viewport().get_visible_rect().size
@@ -46,10 +44,8 @@ func _on_meteor_timer_timeout() -> void:
 	
 
 func _on_meteor_collision():
-	health -= 1
-	get_tree().call_group("ui", "set_health", health)
-	if health <= 0:
-		get_tree().change_scene_to_file("res://Scenes/Game over.tscn")
+	Global.health -= 1
+	get_tree().call_group("ui", "set_health", Global.health)
 
 
 func _on_player_laser(pos) -> void:

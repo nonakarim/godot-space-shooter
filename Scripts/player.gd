@@ -32,9 +32,9 @@ func _process(delta: float) -> void:
 	
 	if Global.laserCount == 0 or Global.health <= 0:
 		position = pos
+		$GPUParticles2D.emitting = false
 		$PlayerImage.visible = false
 		$GPUParticles2D2.local_coords = true
-		$GPUParticles2D.emitting = false
 		$GPUParticles2D2.emitting = true
 		await get_tree().create_timer(2.0).timeout
 		get_tree().change_scene_to_file("res://Scenes/Game over.tscn")

@@ -53,8 +53,3 @@ func _on_player_laser(pos) -> void:
 	laser.position = pos   
 	$Lasers.add_child(laser)
 	
-
-
-func _process(delta: float) -> void:
-	if not $"Game-Play-sound".playing:
-		$"Game-Play-sound".play()

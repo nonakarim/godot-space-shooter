@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://coe75mcwik7"]
+[gd_scene load_steps=11 format=3 uid="uid://coe75mcwik7"]
 
 [ext_resource type="Texture2D" uid="uid://c274bdbasjd3v" path="res://Graphics/PNG/playerShip2_orange.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://ds01ofabjdfx" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="AudioStream" uid="uid://71gs86tdhcc8" path="res://Graphics/Fonts&sounds/sfx-laser2_buXrdMnm .ogg" id="3_6t5aa"]
+[ext_resource type="AudioStream" uid="uid://cpc2a2ju6kbs1" path="res://Graphics/Fonts&sounds/Explosion.mp3" id="4_vgqql"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_vgqql"]
 
@@ -55,6 +56,7 @@ position = Vector2(182, -14)
 
 [node name="LaserTimer" type="Timer" parent="."]
 wait_time = 0.5
+autostart = true
 
 [node name="Laser_Sound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(4, 6)
@@ -69,10 +71,13 @@ local_coords = true
 process_material = SubResource("ParticleProcessMaterial_fkybt")
 
 [node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
-position = Vector2(152, 262)
+position = Vector2(182, 36)
 emitting = false
 amount = 2000
 texture = SubResource("CanvasTexture_6t5aa")
 process_material = SubResource("ParticleProcessMaterial_vgqql")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_vgqql")
 
 [connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]

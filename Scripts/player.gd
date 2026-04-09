@@ -31,13 +31,15 @@ func _process(delta: float) -> void:
 	move_and_slide()
 	
 	if Global.laserCount == 0 or Global.health <= 0:
+		Music.playing = false
+		if not $AudioStreamPlayer2D.playing:
+			$AudioStreamPlayer2D.play()
 		position = pos
 		$GPUParticles2D.emitting = false
 		$PlayerImage.visible = false
-		$GPUParticles2D2.emitting = true
+		$GPUParticles2D2.emitting = true 
 		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://Scenes/Game over.tscn")
 
-
 func _on_laser_timer_timeout() -> void:
-	can_shoot = true;
+	can_shoot = true

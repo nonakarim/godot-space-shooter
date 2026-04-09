@@ -24,7 +24,7 @@ position = Vector2(64.00001, 51)
 scale = Vector2(0.88552415, 0.9151569)
 polygon = PackedVector2Array(570, 661, 522, 634, 501, 622, 491, 580, 518, 506, 550, 507, 573, 482, 602, 488, 634, 474, 659, 475, 691, 495, 728, 528, 759, 538, 774, 568, 789.36304, 619.5659, 774.6825, 656.718, 712, 681, 659, 675, 642, 671, 613, 679, 602, 664)
 
-[node name="Start" type="Sprite2D" parent="."]
+[node name="startButton" type="Sprite2D" parent="."]
 position = Vector2(642, 354)
 scale = Vector2(0.57708335, 0.5615741)
 texture = ExtResource("4_pg4io")
@@ -40,3 +40,5 @@ scale = Vector2(0.56299216, 0.5408163)
 texture = ExtResource("5_rk01k")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="startButton" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="." to="startButton" method="_on_start_mouse_exited"]

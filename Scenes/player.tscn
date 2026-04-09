@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://coe75mcwik7"]
+[gd_scene load_steps=10 format=3 uid="uid://coe75mcwik7"]
 
 [ext_resource type="Texture2D" uid="uid://c274bdbasjd3v" path="res://Graphics/PNG/playerShip2_orange.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://ds01ofabjdfx" path="res://Scripts/player.gd" id="1_cvnsp"]
@@ -14,11 +14,27 @@ gravity = Vector3(0, 98, 0)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_6t5aa"]
 
+[sub_resource type="Curve" id="Curve_6t5aa"]
+_data = [Vector2(0.23636363, 0.23595512), 0.0, 0.0, 0, 0, Vector2(0.4909091, 0.48314613), 0.0, 0.0, 0, 0, Vector2(0.95454544, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_vgqql"]
+width = 281
+curve = SubResource("Curve_6t5aa")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vgqql"]
+lifetime_randomness = 0.26
 particle_flag_disable_z = true
-emission_shape = 1
-emission_sphere_radius = 74.15
+emission_shape_scale = Vector3(1280, 720, 1)
+angle_min = -179.99998
+angle_max = 180.00002
+spread = 180.0
+initial_velocity_min = 134.62
+initial_velocity_max = 1000.0
 gravity = Vector3(0, 98, 0)
+scale_min = 0.0
+scale_max = 40.66
+scale_curve = SubResource("CurveTexture_vgqql")
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 6
@@ -53,8 +69,9 @@ local_coords = true
 process_material = SubResource("ParticleProcessMaterial_fkybt")
 
 [node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+position = Vector2(152, 262)
 emitting = false
-amount = 500
+amount = 2000
 texture = SubResource("CanvasTexture_6t5aa")
 process_material = SubResource("ParticleProcessMaterial_vgqql")
 

@@ -7,6 +7,7 @@ var rotation_speed
 signal collision
 
 func _ready() -> void:
+	$AudioStreamPlayer2D.stream = preload("res://Graphics/Fonts&sounds/hit (2).mp3")
 	var rng := RandomNumberGenerator.new()
 	var width = get_viewport().get_visible_rect().size[0]
 	var random_x = rng.randi_range(0, width)
@@ -25,6 +26,8 @@ func _process(delta: float) -> void:
 		queue_free()
 
 func _on_body_entered(_body: Node2D) -> void:
-	queue_free()
+	$MeteorImage.visible = false
 	collision.emit()
+	$AudioStreamPlayer2D.play()
+	await get_tree().create_timer(1.33).timeout
 	

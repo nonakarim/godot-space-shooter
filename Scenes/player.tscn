@@ -13,7 +13,7 @@ emission_shape = 1
 emission_sphere_radius = 21.83
 gravity = Vector3(0, 98, 0)
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_6t5aa"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_fkybt"]
 
 [sub_resource type="Curve" id="Curve_6t5aa"]
 _data = [Vector2(0.23636363, 0.23595512), 0.0, 0.0, 0, 0, Vector2(0.4909091, 0.48314613), 0.0, 0.0, 0, 0, Vector2(0.95454544, 1), 0.0, 0.0, 0, 0]
@@ -74,7 +74,7 @@ process_material = SubResource("ParticleProcessMaterial_fkybt")
 position = Vector2(182, 36)
 emitting = false
 amount = 2000
-texture = SubResource("CanvasTexture_6t5aa")
+texture = SubResource("CanvasTexture_fkybt")
 process_material = SubResource("ParticleProcessMaterial_vgqql")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

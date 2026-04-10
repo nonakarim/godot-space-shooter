@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://citt5w1b4bl5j"]
+[gd_scene load_steps=4 format=3 uid="uid://citt5w1b4bl5j"]
 
 [ext_resource type="Script" uid="uid://bv71h66m637p3" path="res://Scripts/meteors.gd" id="1_pxqdp"]
 [ext_resource type="Texture2D" uid="uid://x3patjimvxfe" path="res://Graphics/PNG/Meteors/meteorBrown_big1.png" id="1_vikbp"]
+[ext_resource type="AudioStream" uid="uid://d5cbjmexjifi" path="res://Graphics/Fonts&sounds/hit (2).mp3" id="3_cp0ko"]
 
 [node name="Meteors" type="Area2D"]
 collision_layer = 2
@@ -16,5 +17,8 @@ texture = ExtResource("1_vikbp")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-1200, 44)
 polygon = PackedVector2Array(1018, 28, 992, 112, 1039, 169, 1088, 149, 1128, 152, 1155, 94, 1109, 21)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_cp0ko")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

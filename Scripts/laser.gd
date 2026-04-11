@@ -1,7 +1,6 @@
 extends Area2D
 @export var speed = 500
 
-static var score:int = 0
 
 func _ready() -> void:
 	var tween = create_tween()
@@ -14,6 +13,5 @@ func _on_area_entered(area: Area2D) -> void:
 	Global.laserCount += 1
 	area.queue_free()
 	queue_free()  
-	score += 1 
-	Global.score = score
-	get_tree().call_group("ui", "set_score", score)
+	Global.score += 1 
+	get_tree().call_group("ui", "set_score", Global.score)

@@ -30,6 +30,10 @@ func _process(delta: float) -> void:
 	get_tree().call_group("ui", "set_laser_count", Global.laserCount)
 	move_and_slide()
 	
+	if Global.laserCount > 0 and Global.health > 0 and Global.score == 20:
+		Music.playing = false
+		get_tree().change_scene_to_file("res://Scenes/Win.tscn")
+	
 	if Global.laserCount == 0 or Global.health <= 0:
 		Music.playing = false
 		if not $AudioStreamPlayer2D.playing:
@@ -40,6 +44,5 @@ func _process(delta: float) -> void:
 		$GPUParticles2D2.emitting = true 
 		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://Scenes/Game over.tscn")
-
 func _on_laser_timer_timeout() -> void:
 	can_shoot = true

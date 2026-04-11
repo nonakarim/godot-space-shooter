@@ -1,11 +1,10 @@
 extends Control
- 
+
 func _ready() -> void:
-	$Score.text += str(Global.score)
 	Global.laserCount = 10
 	Global.health = 3
-	Global.score = 0
 	Music.playing = false
+	Global.score = 0
 	$AudioStreamPlayer2D.play()
 
 func _process(delta: float) -> void:
@@ -16,4 +15,3 @@ func _process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://Scenes/level.tscn")
 	elif Input.is_action_just_pressed("exit"):
 		get_tree().quit()
-		

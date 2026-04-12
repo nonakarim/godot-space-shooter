@@ -16,7 +16,7 @@ texture = ExtResource("1_vikbp")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-1200, 44)
-polygon = PackedVector2Array(1018, 28, 992, 112, 1039, 169, 1088, 149, 1128, 152, 1155, 94, 1109, 21)
+polygon = PackedVector2Array(1018, 28, 988, 112, 1037, 176, 1089, 155, 1136, 158, 1161, 96, 1110, 20)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_cp0ko")

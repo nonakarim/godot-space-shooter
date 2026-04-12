@@ -30,7 +30,7 @@ func _process(delta: float) -> void:
 	get_tree().call_group("ui", "set_laser_count", Global.laserCount)
 	move_and_slide()
 	
-	if Global.laserCount > 0 and Global.health > 0 and Global.score == 20:
+	if Global.laserCount > 0 and Global.health > 0 and Global.score == 30:  
 		Music.playing = false
 		get_tree().change_scene_to_file("res://Scenes/Win.tscn")
 	

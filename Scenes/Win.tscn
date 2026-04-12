@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://8gf5g0dw6s4p" path="res://Graphics/Fonts&sounds/kenvector_future.ttf" id="1_3vusp"]
 [ext_resource type="Script" uid="uid://dacxuibbay6ps" path="res://Scripts/win.gd" id="1_jo0u0"]
-[ext_resource type="AudioStream" uid="uid://c0dax1dl0b1jo" path="res://Graphics/Fonts&sounds/Win.mp3" id="3_wqdp0"]
+[ext_resource type="AudioStream" uid="uid://d0osk8cf17m7u" path="res://Graphics/Fonts&sounds/Win.mp3" id="3_wqdp0"]
 [ext_resource type="Texture2D" uid="uid://wipvluncrwyg" path="res://Graphics/Crown.png" id="4_8acr0"]
 
 [node name="Control" type="Control"]
@@ -17,10 +17,10 @@ script = ExtResource("1_jo0u0")
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.125
-anchor_bottom = 0.155
-offset_right = 1117.0
-offset_bottom = 617.4
+anchor_right = 1.033
+anchor_bottom = 1.0
+offset_right = -0.23999023
+offset_bottom = 9.0
 color = Color(0.2, 1, 0.3529412, 1)
 
 [node name="Label" type="Label" parent="."]

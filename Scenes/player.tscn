@@ -55,7 +55,7 @@ polygon = PackedVector2Array(-59, 185, 5, 179, 172, 91, 203.01485, -17.676346, 2
 position = Vector2(182, -14)
 
 [node name="LaserTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.2
 autostart = true
 
 [node name="Laser_Sound" type="AudioStreamPlayer2D" parent="."]

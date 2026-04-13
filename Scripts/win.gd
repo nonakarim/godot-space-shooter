@@ -1,7 +1,7 @@
 extends Control
 
 func _ready() -> void:
-	Global.laserCount = 10
+	Global.laserCount = 20
 	Global.health = 3
 	Music.playing = false
 	Global.score = 0

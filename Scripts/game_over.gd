@@ -2,7 +2,7 @@ extends Control
  
 func _ready() -> void:
 	$Score.text += str(Global.score)
-	Global.laserCount = 10
+	Global.laserCount = 20
 	Global.health = 3
 	Global.score = 0
 	Music.playing = false

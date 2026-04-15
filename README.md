@@ -83,13 +83,13 @@ Open the project using **Godot 4.5** and run ▶️
 
 ## 🎥 Demo
 
-▶️ [Watch Gameplay Video](Demo/demo.mp4)
+▶️ [![Watch Gameplay](https://img.youtube.com/vi/4pXrY5ZLXOU/0.jpg)](https://youtu.be/4pXrY5ZLXOU)
 
 ---
 
 ## 📸 Screenshot
 
-![Screenshot](Demo/Screenshot.png)
+![Screenshot](Graphics/Screenshot.png)
 
 ---
 
